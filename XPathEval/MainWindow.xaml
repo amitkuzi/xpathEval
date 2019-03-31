@@ -1,0 +1,25 @@
+﻿<Window x:Class="XPathEval.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XPathEval"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition MinHeight="24"/>
+            <RowDefinition MinHeight="55"/>
+            <RowDefinition Height="361*"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="xPathInput" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"   TextWrapping="Wrap"   VerticalAlignment="Stretch" TextChanged="XPathInput_TextChanged" />
+        <TextBox MinLines="20" Name="xmlInput" HorizontalAlignment="Stretch"   Grid.Row="2"     VerticalAlignment="Stretch" TextChanged="XmlInput_TextChanged" AcceptsReturn="True" AcceptsTab="True" AutoWordSelection="True"  />
+        <TextBox MinLines="20" Name="xPathOutput" Grid.Column="1" HorizontalAlignment="Stretch"     Grid.Row="2"   VerticalAlignment="Stretch"  />
+        <TextBlock Name="errorOutput" HorizontalAlignment="Stretch"   Grid.Row="1" TextWrapping="Wrap"   VerticalAlignment="Stretch"   Grid.ColumnSpan="2" />
+
+    </Grid>
+</Window>
